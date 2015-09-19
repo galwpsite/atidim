@@ -1180,12 +1180,7 @@ img.alignright,
 	text-decoration: none;
 }
 
-.nav-primary .genesis-nav-menu a:hover,
-.nav-primary .genesis-nav-menu a:focus,
-.nav-primary .genesis-nav-menu .current-menu-item > a {
-	color: #fff;
-	text-decoration: underline;
-}
+
 
 .nav-primary .genesis-nav-menu .sub-menu a {
 	color: #333;
@@ -1400,9 +1395,8 @@ li.comment {
 }
 
 .sidebar .widget {
-	background-color: #fff;
 	margin-bottom: 40px;
-	padding: 40px;
+	padding: 20px;
 }
 
 /* # Footer Widgets
@@ -1922,6 +1916,8 @@ li.comment {
 .land-rental {
 	background-color: #AA930E;
 	text-align: center;
+    max-width: 273px;
+    min-height: 325px;
 }
 .box.park-atidim .readmore {
 	position: absolute;
@@ -2023,4 +2019,77 @@ img.top-image {
     background: -ms-linear-gradient(top,  #d3d3d5 1%,#d3d3d5 1%,#ffffff 52%,#adadad 99%); /* IE10+ */
     background: linear-gradient(to bottom,  #d3d3d5 1%,#d3d3d5 1%,#ffffff 52%,#adadad 99%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d3d3d5', endColorstr='#adadad',GradientType=0 ); /* IE6-9 */
+}
+
+.nav-primary .genesis-nav-menu a:hover,
+.nav-primary .genesis-nav-menu a:focus,
+.nav-primary .genesis-nav-menu .current-menu-item > a {
+    text-decoration: none;
+    border:1px solid #CCCCCC;
+    border-radius: 3px;
+
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d3d3d5+1,d3d3d5+1,ffffff+52,adadad+99 */
+    background: #d3d3d5; /* Old browsers */
+    background: -moz-linear-gradient(top,  #d3d3d5 1%, #d3d3d5 1%, #ffffff 52%, #adadad 99%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#d3d3d5), color-stop(1%,#d3d3d5), color-stop(52%,#ffffff), color-stop(99%,#adadad)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #d3d3d5 1%,#d3d3d5 1%,#ffffff 52%,#adadad 99%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #d3d3d5 1%,#d3d3d5 1%,#ffffff 52%,#adadad 99%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #d3d3d5 1%,#d3d3d5 1%,#ffffff 52%,#adadad 99%); /* IE10+ */
+    background: linear-gradient(to bottom,  #d3d3d5 1%,#d3d3d5 1%,#ffffff 52%,#adadad 99%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d3d3d5', endColorstr='#adadad',GradientType=0 ); /* IE6-9 */
+}
+div.top-area {
+    position: relative;
+}
+div.top-area a.logo {
+    position: absolute;
+    left:0;
+    top:7px;
+}
+
+.page .row .box{
+   margin-top:15px;
+}
+.news a {
+    text-decoration: underline;
+}
+.hide {
+    display: none;
+}
+ul.letters li {
+    display: inline-block;
+    margin:0 10px;
+}
+ul.letters li a{
+    background: #AA930E;
+    border-radius: 2px;
+    widows: 20px;
+    height: 30px;
+    display: block;
+    padding:2px 6px;
+}
+
+ul.letters li a:hover, ul.letters li a.active{
+    cursor: pointer;
+    background: #3A8791;
+}
+.client_logo {
+    padding: 15px;
+    background-color: #fff;
+}
+.client_logo img {
+    display: block;
+    margin: 0 auto;
+
+}
+.row.client {
+    margin:30px 0;
+    border-bottom:1px #CCCCCC dashed;
+    padding-bottom:20px;
+}
+div.client a,div.client span.title {
+    color:#AA930E;
+}
+div.client a:hover {
+    text-decoration: underline;
 }

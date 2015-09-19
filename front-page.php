@@ -28,9 +28,7 @@ function do_content_home(){
         </div>
         <div class="columns three custom-sidebar">
             <div clas="custom-sidebar-inner">
-                <div class="land-rental box">
-                    <h3>שטחים להשכרה</h3>
-                </div>
+                <?php echo do_shortcode('[custom_shortcode_landing]');?>
             </div>
         </div>
     </div>

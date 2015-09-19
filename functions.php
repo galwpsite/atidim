@@ -162,8 +162,8 @@ add_action( 'init', 'custom_post_type_news', 0 );
 function custom_post_type_clients() {
 
     $labels = array(
-        'name'                => _x( 'Clients', 'Post Type General Name', 'text_domain' ),
-        'singular_name'       => _x( 'Client', 'Post Type Singular Name', 'text_domain' ),
+        'name'                => _x( 'clients', 'Post Type General Name', 'text_domain' ),
+        'singular_name'       => _x( 'client', 'Post Type Singular Name', 'text_domain' ),
         'menu_name'           => __( 'Clients', 'text_domain' ),
         'name_admin_bar'      => __( 'Post Type', 'text_domain' ),
         'parent_item_colon'   => __( 'Parent Item:', 'text_domain' ),
@@ -179,7 +179,7 @@ function custom_post_type_clients() {
         'not_found_in_trash'  => __( 'Not found in Trash', 'text_domain' ),
     );
     $args = array(
-        'label'               => __( 'Client', 'text_domain' ),
+        'label'               => __( 'client', 'text_domain' ),
         'description'         => __( 'Post Type Description', 'text_domain' ),
         'labels'              => $labels,
         'supports'            => array( 'title', ),
@@ -193,12 +193,12 @@ function custom_post_type_clients() {
         'show_in_admin_bar'   => true,
         'show_in_nav_menus'   => true,
         'can_export'          => true,
-        'has_archive'         => false,
+        'has_archive'         => true,
         'exclude_from_search' => false,
         'publicly_queryable'  => true,
         'capability_type'     => 'page',
     );
-    register_post_type( 'post_type_clients', $args );
+    register_post_type( 'clients', $args );
 
 }
 add_action( 'init', 'custom_post_type_clients', 0 );
@@ -212,8 +212,27 @@ function do_top_image(){
 		$imageUrl=get_stylesheet_directory_uri()."/images/top-images/home.png";
 //	php stop here
 	?>
+    <div class="top-area">
+        <a href="<?php echo get_home_url() ?> " class="logo" title="עמוד הבית">
+            <img src="<?php  echo get_stylesheet_directory_uri()?>/images/logo.png"/>
+        </a>
 		<img class="top-image" src="<?php echo $imageUrl?>"/>
+    </div>
 <?php
 //	php start here
 }
 add_action('genesis_header','do_top_image');
+
+// Add Shortcode
+// Add Shortcode
+function custom_shortcode_landing() {
+
+    $return = '<div class="land-rental box">';
+    $return .= '<h3>שטחים להשכרה</h3> </div>';
+    return $return;
+
+}
+add_shortcode( 'custom_shortcode_landing', 'custom_shortcode_landing' );
+
+
+add_image_size( 'client-thumb', 300, 200,false  );
